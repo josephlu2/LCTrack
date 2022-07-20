@@ -52,21 +52,16 @@ const Problem = (props) => {
                 <td><input className = "formfield" type="text" value = {note} placeholder="Enter notes here..." onChange = {event => setNote(event.target.value)} /></td>
                 
                 <button className = "buttonform" onClick={e => {
-                    if(toast.isActive(toastId.current)) {
-                        
-                      } else {
-                        console.log('test')
-                        toast.success('Successfully Saved', {
-                            position: "top-right",
-                            autoClose: 5000,
-                            hideProgressBar: false,
-                            closeOnClick: true,
-                            pauseOnHover: true,
-                            draggable: true,
-                            progress: undefined,
-                            toastId: "success"
-                            });
-                      }
+                    toast.success('Successfully Saved', {
+                        position: "top-right",
+                        autoClose: 500,
+                        hideProgressBar: true,
+                        closeOnClick: true,
+                        pauseOnHover: false,
+                        draggable: true,
+                        progress: undefined,
+                        toastId: "success"
+                        });
                     e.preventDefault();
                     localStorage.setItem(props.id, note);
                     }}>
