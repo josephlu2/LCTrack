@@ -31,29 +31,27 @@ const Problem = (props) => {
 
 
     return ( 
-        <div className="problem">
-            <form className = "prop">
-                <input 
+        <tr className = "prop">
+                <td><input 
                     type="checkbox"
                     checked={checked}
                     onChange={handleChange}
                 />
-                <p className = "prop">{props.problem}</p>
-                <p className = "prop">{props.difficulty}</p>
-                <p className = "prop">{props.category}</p>
+                </td>
+                <td><p className = "prop">{props.problem}</p></td>
+                <td><p className = "prop">{props.difficulty}</p></td>
+                <td><p className = "prop">{props.category}</p></td>
                 
-                <input className = "formfield" type="text" value = {note} placeholder="Enter notes here" onChange = {event => setNote(event.target.value)} />
+                <td><input className = "formfield" type="text" value = {note} placeholder="Enter notes here..." onChange = {event => setNote(event.target.value)} /></td>
                 
-                <button onClick={e => {
+                <button className = "buttonform" onClick={e => {
                     e.preventDefault();
                     localStorage.setItem(props.id, note);
                     console.log('saved')
                     }}>
-                    Save
+                    Save Notes
                 </button>
-            </form>
-        </div>
-
+        </tr>
      );
 }
  

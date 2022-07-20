@@ -12,7 +12,17 @@ function App() {
     <div className="App">
       <Navbar />
       <section>
-        {problems}
+        <table>
+          <tr>
+            <th>Status</th>
+            <th>Name</th>
+            <th>Difficulty</th>
+            <th>Category</th>
+            <th>Notes</th>
+            <th>Save</th>
+          </tr>
+          {problems}
+        </table>
       </section>
     </div>
   );
