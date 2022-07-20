@@ -58,9 +58,9 @@ const Problem = (props) => {
                     onChange={handleChange}
                 />
                 </td>
-                <td><p className = "prop"><a href={props.url} target="_blank">{props.problem}</a></p></td>
+                <td><p className = "prop question"><a href={props.url} target="_blank">{props.problem}</a></p></td>
                 <td><p className = "prop">{props.difficulty}</p></td>
-                <td><p className = "prop">{props.category}</p></td>
+                <td><p className = "prop difficulty">{props.category}</p></td>
                 
                 <td><input className = "formfield" type="text" value = {note} onBlur = {handleBlur} placeholder="Enter notes here..." onChange = {event => setNote(event.target.value)} /></td>
                 

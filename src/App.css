@@ -45,8 +45,13 @@ nav {
   background-color: rgb(162, 162, 162);
 }
 
-.prop {
-
+.question {
+  max-width: 200px;
+  text-align: center;
+  margin:0 auto;
+}
+a:link {
+  text-decoration: none;
 }
 
 .formfield {
@@ -77,4 +82,8 @@ th {
   cursor: pointer;
 } td {
   padding:0px;
+} .difficulty {
+  max-width: 100px;
+  text-align: center;
+  margin:0 auto;
 }
