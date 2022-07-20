@@ -6,7 +6,21 @@ import 'react-toastify/dist/ReactToastify.css';
 const Problem = (props) => {
     const [note, setNote] = useState();
     const [checked, setChecked] = React.useState(false);
-    const toastId = React.useRef(null);
+    
+    const handleBlur = () => {
+        localStorage.setItem(props.id, note);
+        console.log('blur handled')
+        toast.success('Successfully Auto-Saved', {
+            position: "top-right",
+            autoClose: 1000,
+            hideProgressBar: true,
+            closeOnClick: true,
+            pauseOnHover: false,
+            draggable: true,
+            progress: undefined,
+            toastId: "success"
+            });
+    }
 
     const handleChange = () => {
         setChecked(!checked);
@@ -33,7 +47,6 @@ const Problem = (props) => {
     useEffect(() => {
         console.log(props.id, note, '-has changed');
     }, [note]);
-    
 
 
     return ( 
@@ -49,12 +62,12 @@ const Problem = (props) => {
                 <td><p className = "prop">{props.difficulty}</p></td>
                 <td><p className = "prop">{props.category}</p></td>
                 
-                <td><input className = "formfield" type="text" value = {note} placeholder="Enter notes here..." onChange = {event => setNote(event.target.value)} /></td>
+                <td><input className = "formfield" type="text" value = {note} onBlur = {handleBlur} placeholder="Enter notes here..." onChange = {event => setNote(event.target.value)} /></td>
                 
                 <button className = "buttonform" onClick={e => {
                     toast.success('Successfully Saved', {
                         position: "top-right",
-                        autoClose: 500,
+                        autoClose: 1000,
                         hideProgressBar: true,
                         closeOnClick: true,
                         pauseOnHover: false,
