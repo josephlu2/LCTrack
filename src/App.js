@@ -2,6 +2,7 @@ import './App.css';
 import Navbar from "./components/Navbar";
 import Problem from "./components/Problem"
 import data from "./data"
+import { ToastContainer } from 'react-toastify';
 
 function App() {
   const problems = data.map(item => {
@@ -24,6 +25,7 @@ function App() {
           {problems}
         </table>
       </section>
+      <ToastContainer />
     </div>
   );
 }
