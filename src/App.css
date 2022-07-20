@@ -45,8 +45,8 @@ nav {
   background-color: rgb(162, 162, 162);
 }
 
-.problem {
-  font-size: 18px;
+.prop {
+
 }
 
 .formfield {
@@ -69,4 +69,12 @@ th {
   color: white;
 }table {
   width: 100%;
+} .check {
+  height: 25px;
+  width: 25px;
+  background-color: #eee;
+} .check:hover{
+  cursor: pointer;
+} td {
+  padding:0px;
 }

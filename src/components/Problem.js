@@ -33,12 +33,13 @@ const Problem = (props) => {
     return ( 
         <tr className = "prop">
                 <td><input 
+                    class = "check"
                     type="checkbox"
                     checked={checked}
                     onChange={handleChange}
                 />
                 </td>
-                <td><p className = "prop">{props.problem}</p></td>
+                <td><p className = "prop"><a href={props.url} target="_blank">{props.problem}</a></p></td>
                 <td><p className = "prop">{props.difficulty}</p></td>
                 <td><p className = "prop">{props.category}</p></td>
                 
