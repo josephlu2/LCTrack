@@ -3,7 +3,10 @@ import Navbar from "./components/Navbar";
 import Problem from "./components/Problem"
 import data from "./data"
 import { ToastContainer } from 'react-toastify';
+import ReactGA from "react-ga4";
 
+ReactGA.initialize("G-RY8F7CR75P");
+ReactGA.send("pageview");
 function App() {
   const problems = data.map(item => {
     return <Problem key={item.id} {...item} />;
